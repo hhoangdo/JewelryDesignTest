@@ -1,0 +1,17 @@
+# Blender backups
+*.blend1
+*.blend2
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Local work
+projects/*
+!projects/README.md
+
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store
