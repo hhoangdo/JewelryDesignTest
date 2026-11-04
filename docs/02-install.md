@@ -31,6 +31,8 @@ If that fails:
 winget install --id Git.Git -e --source winget
 ```
 
+If `winget` is unavailable on your Windows 10 build, install Git for Windows from <https://git-scm.com/download/win>.
+
 Close and reopen PowerShell, then run `git --version` again. Expected: `git version 2.x`.
 
 ## Step 2 — Install uv and uvx
@@ -44,6 +46,8 @@ If that fails:
 ```powershell
 winget install --id astral-sh.uv -e --source winget
 ```
+
+If `winget` is unavailable, use the official uv installer from <https://docs.astral.sh/uv/getting-started/installation/>.
 
 Close and reopen PowerShell. Verify:
 
