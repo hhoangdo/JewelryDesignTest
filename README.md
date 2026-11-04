@@ -7,6 +7,8 @@ A free, Windows-based workshop that turns plain-English ring prompts into editab
 
 *Left: the reference photograph. Right: the example solitaire built by this workflow.*
 
+> **On a fresh machine with OpenCode?** Paste the planning prompt from [START-HERE.md](START-HERE.md) into OpenCode first. It inspects the machine and plans the setup; it does not install or edit anything until you approve the plan.
+
 ## What you will build
 
 The worked example is a **white-gold, US 7, four-prong cushion solitaire** with an open V-head. It is deliberately one example, not a gallery: the point is that you can reproduce it, understand it, and then build your own design from a prompt.
@@ -37,6 +39,8 @@ Windows XP cannot run any part of this stack:
 If a colleague is still on XP, the only path is to move to a Windows 10/11 64-bit machine (or use Remote Desktop to one). Do not try to force Blender 4.5 onto XP.
 
 ## Quick start
+
+If you are using an AI agent on a fresh machine, start with [START-HERE.md](START-HERE.md) instead of following the manual steps below. The prompt makes the agent read the guide, inspect the machine, and plan before installing anything.
 
 ```powershell
 # 1. Clone the workshop
@@ -86,6 +90,7 @@ OpenCode agent  ──MCP──►  mcp-for-blender  ──TCP :9876──►  B
 
 | Path | What it is |
 |---|---|
+| `START-HERE.md` | The planning prompt to give a fresh OpenCode session before installing anything |
 | `example-solitaire/` | The single worked example: model, hero render, reference image, and the five scripts that rebuild it |
 | `templates/` | The corrected starting `.blend` and the maintainer script that regenerates it |
 | `docs/` | Setup, verification, first-project, recreate-example, troubleshooting, glossary, resources |

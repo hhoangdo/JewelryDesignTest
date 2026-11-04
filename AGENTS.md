@@ -8,6 +8,10 @@ These rules apply when an AI agent works in this repository.
 - Never modify `templates/`, `example-solitaire/`, or another project unless the user explicitly asks.
 - `projects/` is gitignored. Do not try to commit it.
 
+## Fresh machine setup
+
+When the user is setting up a new machine, use [START-HERE.md](START-HERE.md) as the entry point. Inspect the machine, present a plan, and wait for approval before installing anything.
+
 ## Scene conventions
 
 - Metric units, millimetres displayed.
