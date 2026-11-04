@@ -138,9 +138,26 @@ RESULT: PASS (1 warning: port not listening)
 
 ## 7. Cleanup
 
-The clean-room Blender, its downloads, logs, temporary start script, and PID file were deleted after the test. `D:\JewelryStudio\clean-test` no longer exists.
+The clean-room Blender, its downloads, logs, temporary start script, and PID file were deleted after the test. The temporary clone was also deleted. `D:\JewelryStudio\clean-test` and the clone folder no longer exist.
 
-## 8. Known limitations
+## 8. Clone test
+
+The public repository was cloned into a different folder to prove the paths are portable:
+
+```powershell
+git clone https://github.com/hhoangdo/JewelryDesignTest.git `
+  C:\Users\<you>\AppData\Local\Temp\opencode\JewelryDesignTest-clone
+```
+
+| Check | Result |
+|---|---|
+| `check-setup.ps1` from the clone | **PASS** — one warning because Blender was closed |
+| `verify_scene.py` on the cloned example | **PASS — 5/5 groups** |
+| `new-project.ps1 -Name clone-smoke` | **PASS** — `ring.blend`, `scripts\`, `renders\` created |
+
+The first clone test **failed** the studio check: the checked-in `ring.blend` stored an absolute hero path (`D:/JewelryDesignTest/...`), so the path assertion broke when the repository moved. The fix was to store `//renders/hero.png` in the blend and resolve it with `bpy.path.abspath()` in `verify_scene.py` and `studio_render.py`. The clone was repeated after the fix and passed.
+
+## 9. Known limitations
 
 - The example is a **visual model**, not a manufacturing/casting certification.
 - The reference photograph cannot fully determine the hidden pavilion/setting geometry.
