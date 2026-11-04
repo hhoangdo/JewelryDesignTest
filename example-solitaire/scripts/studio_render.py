@@ -187,7 +187,8 @@ def configure_studio() -> None:
 
 def render_hero() -> None:
     assert bpy.data.filepath.endswith("ring.blend"), "Render only a saved project"
-    assert bpy.context.scene.render.filepath.replace("\\", "/") == HERO, "Hero path does not match this project"
+    render_path = bpy.path.abspath(bpy.context.scene.render.filepath).replace("\\", "/")
+    assert render_path == HERO, "Hero path does not match this project"
     bpy.ops.render.render(write_still=True)
     bpy.ops.wm.save_as_mainfile(filepath=bpy.data.filepath)
     print("HERO saved to", HERO)

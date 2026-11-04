@@ -177,7 +177,8 @@ def verify_head(require_claws: bool = False) -> None:
 
 def verify_studio() -> None:
     scene = bpy.context.scene
-    assert scene.render.filepath.replace("\\", "/") == HERO, "Hero targets the wrong project"
+    render_path = bpy.path.abspath(scene.render.filepath).replace("\\", "/")
+    assert render_path == HERO, "Hero targets the wrong project"
     assert scene.render.engine.lower() == "cycles"
     assert scene.cycles.use_denoising
     assert scene.render.resolution_x == scene.render.resolution_y == 1000
