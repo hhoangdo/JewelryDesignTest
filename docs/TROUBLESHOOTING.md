@@ -106,11 +106,16 @@ Blender 4.5 requires a 64-bit OS and a CPU with SSE4.2. Windows XP cannot run it
 
 1. Update both halves together:
    ```powershell
+   $env:PYTHONIOENCODING = 'utf-8'
    uvx mcp-for-blender==2.2.6 update
    ```
-2. Restart OpenCode completely.
-3. In Blender, disable and re-enable **MCP for Blender**, or restart Blender.
-4. If the addon was installed manually as `blender_mcp.py`, reinstall it with `uvx mcp-for-blender==2.2.6 install-addon` and enable the new copy.
+2. Re-package the addon as an extension:
+   ```powershell
+   powershell -ExecutionPolicy Bypass -File .\tools\install-mcp-addon.ps1 -StudioRoot D:\JewelryStudio
+   ```
+3. Restart OpenCode completely.
+4. In Blender, disable and re-enable **MCP for Blender**, or restart Blender.
+5. If the addon was installed manually as `blender_mcp.py`, reinstall it with `uvx mcp-for-blender==2.2.6 install-addon` and enable the new copy.
 
 ## look returns no image
 
