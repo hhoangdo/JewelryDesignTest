@@ -98,7 +98,7 @@ opencode
 
 Attach `example-solitaire/reference/target.jpg` to the chat (drag and drop it into the prompt), then paste:
 
-> Open `projects/my-solitaire/ring.blend`. Build a white-gold, US 7, four-prong cushion solitaire that matches `example-solitaire/reference/target.jpg` as closely as possible. The stone is a 5.5 mm rounded-square cushion with a 67% table and a 0.6 mm crown. The head is four slender sculpted V-arms with integrated claws and an open pavilion, no donut rail or conical foot. The band is a 2.2 mm comfort band. Use `Gold_White` and `Gem_Center`, the `GEMS` and `METAL` collections, and save each script to `projects/my-solitaire/scripts/`. Inspect with `look` before rendering, then save a 1000×1000 Cycles hero to `projects/my-solitaire/renders/hero.png`. This is a visual model, not a manufacturing certification.
+> The project is open at `projects/my-solitaire/ring.blend`. Build a white-gold, US 7, four-prong cushion solitaire that matches `example-solitaire/reference/target.jpg` as closely as possible. The stone is a 5.5 mm rounded-square cushion with a 67% table and a 0.6 mm crown. The head is four slender sculpted V-arms with integrated claws and an open pavilion, no donut rail or conical foot. The band is a 2.2 mm comfort band. Use `Gold_White` and `Gem_Center`, the `GEMS` and `METAL` collections, and save each script to `projects/my-solitaire/scripts/`. Inspect with `look` before rendering, then save a 1000×1000 Cycles hero to `projects/my-solitaire/renders/hero.png`. This is a visual model, not a manufacturing certification.
 
 ### B5. Make the AI work in stages
 

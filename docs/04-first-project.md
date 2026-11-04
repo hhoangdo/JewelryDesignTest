@@ -43,7 +43,7 @@ Run OpenCode at the **repository root**, not inside the project folder. The AI n
 
 ## 4.4 Paste the first prompt
 
-> Open `projects/first-ring/ring.blend`. Build a solitaire ring: US size 7 (17.3 mm inner diameter), 5 mm round brilliant center stone, 6 claw prongs, yellow gold, 2 mm band width. Use the `GEMS` and `METAL` collections. Save each build script to `projects/first-ring/scripts/`, save the scene to `projects/first-ring/ring.blend`, and do not modify the template or the example.
+> The project is open at `projects/first-ring/ring.blend`. Build a solitaire ring: US size 7 (17.3 mm inner diameter), 5 mm round brilliant center stone, 6 claw prongs, yellow gold, 2 mm band width. Use the `GEMS` and `METAL` collections. Save each build script to `projects/first-ring/scripts/`, save the scene to `projects/first-ring/ring.blend`, and do not modify the template or the example.
 
 The AI should:
 
